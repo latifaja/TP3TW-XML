@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeur approchée de la racine carrée</title>
+</head>
+<body>
+    <h1>Calcul de la valeur approchée de la racine carrée</h1>
+    <button onclick="Raca1()">Calculer la racine carrée</button>
+
+    <script>
+        function Raca1() {
+            
+            let A = parseFloat(prompt("Donnez un nombre A entre 1 et 100 :"));
+
+            if (isNaN(A) || A <= 0 || A > 100) {
+                alert("Veuillez entrer un nombre réel positif entre 1 et 100.");
+                return;
+            }
+
+            // Initialiser x_0 (estimation initiale)
+            let x_n = A / 2;
+
+            // Seuil de précision
+            let epsilon = 1e-6;
+
+            // Itérer jusqu'à ce que l'erreur soit inférieure au seuil epsilon
+            while (Math.abs(x_n * x_n - A) >= epsilon) {
+                x_n = (x_n + A / x_n) / 2;
+            }
+
+            
+            alert("Valeur approchée de la racine carrée de " + A + " = " + x_n);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo3</title>
+</head>
+<body>
+    <h1>Classer 3 nombres</h1>
+    <button onclick="troisNombres()">Classer 3 nombres</button>
+<SCript>
+    function troisNombres() {
+    
+    let num1 = parseInt(prompt("1er nombre :"));
+    let num2 = parseInt(prompt("2ème nombre :"));
+    let num3 = parseInt(prompt("3ème nombre :"));
+
+    
+    let nombres = [num1, num2, num3];
+
+    // Trier le tableau dans l'ordre croissant
+    nombres.sort((a, b) => a - b);
+    //Si a - b est négatif, alors a vient avant b (aucun changement).
+    //Si a - b est positif, alors b vient avant a (ils sont échangés).
+     //Si a - b est zéro, l'ordre ne change pas
+    
+     
+    alert("Les nombres dans l'ordre croissant : " + nombres.join(" "));
+}
+
+</SCript>
+</body>
+</html>

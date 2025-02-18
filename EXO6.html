@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Fibonacci - Fibo1</title>
+</head>
+<body>
+    <h1>Calcul du nième terme de la suite de Fibonacci</h1>
+    <button onclick="fibo1()">Calculer Fibonacci1</button>
+
+    <button onclick="fibo2()">Calculer Fibonacci2</button>
+
+    <script>
+        function fibo1() {
+            
+            let n = parseInt(prompt("Donnez le rang n du terme de la suite de Fibonacci"));
+
+            if (isNaN(n) || n < 0) {
+                alert("Veuillez entrer un nombre entier positif.");
+                return;
+            }
+
+            let a = 0, b = 1;
+
+            if (n === 0) {
+                alert("Le terme de la suite de Fibonacci à la position " + n + " est " + a);
+                return;
+            }
+
+            for (let i = 2; i <= n; i++) {
+                let temp = a + b;
+                a = b;
+                b = temp;
+            }
+
+            alert("Le terme de la suite de Fibonacci à la position " + n + " est " + b);
+        }
+
+
+        function fibo2() {
+            // Demander à l'utilisateur la valeur seuil
+            let seuil = parseInt(prompt("Entrez une valeur limite"));
+
+            if (isNaN(seuil) || seuil < 0) {
+                alert("Veuillez entrer un nombre entier positif.");
+                return;
+            }
+
+            let a = 0, b = 1, index = 1;
+
+            // Si le seuil est inférieur ou égal à 1, on commence la recherche dès le début
+            while (b <= seuil) {
+                let temp = a + b;
+                a = b;
+                b = temp;
+                index++;
+            }
+
+            // Afficher la valeur et le rang du terme trouvé
+            alert("Le premier terme de la suite de Fibonacci supérieur à " + seuil + " est " + b + " à la position " + index);
+        }
+    </script>
+</body>
+</html>

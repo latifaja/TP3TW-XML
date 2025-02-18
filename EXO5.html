@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tester si un nombre est premier</title>
+</head>
+<body>
+    <h1>Tester si un nombre est premier</h1>
+    <button onclick="estPremier()">Tester premier</button>
+    <script>
+        function estPremier() {
+            let num = parseInt(prompt("Donnez un entier positif"));
+            
+            if (isNaN(num) || num <= 1) {
+                alert("Veuillez entrer un entier positif supérieur à 1.");
+                return; 
+            }
+
+            let estPremier = true;
+            
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    estPremier = false; 
+                    alert(num + " n'est pas un nombre premier, il est divisible par " + i);
+                    break; 
+                }
+            }
+
+            if (estPremier) {
+                alert(num + " est un nombre premier.");
+            }
+        }
+    </script>
+</body>
+</html>

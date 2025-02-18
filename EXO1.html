@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion de Température</title>
+</head>
+<body>
+    <h1>Conversion de température Fahrenheit à Celsius</h1>
+    <button onclick="degreC()">Convertir une température</button>
+
+    <script>
+        function degreC() {
+            
+            let tempF = parseFloat(prompt("Une température en Fahrenheit :"));
+
+            // Appliquer la formule de conversion 
+            let tempC = (5 / 9) * (tempF - 32);
+
+            // Afficher la température en Celsius
+            alert("Cette température équivaut à " + tempC.toFixed(1) + " degrés Celsius");
+        }
+    </script>
+</body>
+</html>

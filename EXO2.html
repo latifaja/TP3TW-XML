@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion de Durées</title>
+</head>
+<body>
+    <h1>Conversion de durée en secondes</h1>
+    <button onclick="hjms()">Convertir une durée</button>
+
+    <script>
+        function hjms() {
+            
+            let seconds = parseInt(prompt("Une durée en secondes :"));
+            //Math.floor(4.7))  // Résultat : 4//ELIMINE LA PARTIE DICIMALE
+            // Calcul des jours
+            let days = Math.floor(seconds / (24 * 3600));
+            seconds %= (24 * 3600);  
+
+            // Calcul des heures
+            let hours = Math.floor(seconds / 3600);
+            seconds %= 3600;  
+
+            // Calcul des minutes
+            let minutes = Math.floor(seconds / 60);
+            seconds %= 60;  
+
+            
+            //alert("Cette durée équivaut à " + days + " jours " + hours + " heures " + minutes + " minutes " + seconds + " secondes");
+        
+
+            let result = '';
+
+            if (days > 0) {
+                result += days + ' jour' + (days > 1 ? 's' : '') + ' ';
+            }
+            if (hours > 0) {
+                result += hours + ' heure' + (hours > 1 ? 's' : '') + ' ';
+            }
+            if (minutes > 0) {
+                result += minutes + ' minute' + (minutes > 1 ? 's' : '') + ' ';
+            }
+            if (seconds > 0 || result === '') { 
+                result += seconds + ' seconde' + (seconds > 1 ? 's' : '') + ' ';
+            }
+
+    
+            alert("Cette durée équivaut à " + result);
+}
+        
+    </script>
+</body>
+</html>
