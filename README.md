@@ -58,12 +58,12 @@ Ce projet contient plusieurs exercices en JavaScript visant à renforcer la comp
 **Objectif :** Modifier le programme précédent pour afficher une pyramide au lieu d'un triangle.
 - **Exemple de sortie :**
   ```sh
-      *
-     ***
-    *****
-   *******
-  *********
-  ***********
+        *
+       ***
+      *****
+     *******
+    *********
+   ***********
   *************
   ```
 
@@ -89,7 +89,7 @@ Ce projet contient plusieurs exercices en JavaScript visant à renforcer la comp
   ```
 
 ## Technologies utilisées
-- **Langage :** JavaScript (ES6)
+- **Langage :** JavaScript 
 - **Outils recommandés :** Node.js, navigateur web avec console JavaScript
 
 ## Comment exécuter le projet
