@@ -13,6 +13,9 @@ Ce projet contient plusieurs exercices en JavaScript visant à renforcer la comp
   Une température en Fahrenheit : 60.0
   Cette température équivaut à 15.6 degrés Celsius
   ```
+ ![Exemple de conversion de température](images/exo1.png)
+
+
 
 ### 2. Conversion de durées
 **Objectif :** Écrire une fonction `hjms` qui convertit un nombre de secondes donné en jours, heures, minutes et secondes.
